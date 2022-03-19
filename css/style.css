@@ -1,0 +1,181 @@
+/* Lettertypes (Mali, Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-color: #453F78;
+}
+
+/* Eerste kop van de pagina (Hoofdkop, kop 1) */
+h1 {
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin: inherit;
+}
+
+/* De speelruimte waar het allemaal gebeurd */
+#speelruimte {
+  margin-inline: auto;
+  margin-block: auto;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffcddf;
+  border: solid 8px #ffa6c6;
+}
+
+/* class wordt toegevoegd aan speelruimte dmv javascript */
+.licht-uit {
+  filter: brightness(5%);
+}
+
+/* Dit is voor de paragraaf waarmee de Tamagotchi praat en tekst met tips */
+#praat {
+  font-family: 'Mali', cursive;
+  font-weight: 500;
+  font-size: 20px;
+  color: #131414;
+  text-align: center;
+  margin-bottom: inherit;
+}
+
+#tip {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #131414;
+  text-align: center;
+}
+
+/* Meteoor afbeelding en inslag */
+#meteoor {
+  position: absolute;
+  z-index: 3;
+  height: 350px;
+  width: auto;
+  left: 800px;
+  bottom: 600px;
+}
+
+/* class wordt toegevoegd aan meteoor afbeelding dmv javascript */
+.meteoor-animatie {
+  animation: meteoor-inslag 2.5s 1;
+}
+
+@keyframes meteoor-inslag {
+  0% {
+    left: 800px;
+    bottom: 600px;
+  }
+
+  100% {
+    left: 425px;
+    bottom: 250px;
+  }
+}
+
+/* Ufo afbeelding en animatie */
+#ufo {
+  position: absolute;
+  z-index: 3;
+  height: 400px;
+  width: auto;
+  left: 1000px;
+  top: 0px;
+}
+
+/* class wordt toegevoegd aan ufo afbeelding dmv javascript */
+.ufo-animatie {
+  animation: vliegende-ufo 5s 2;
+  animation-direction: alternate;
+}
+
+@keyframes vliegende-ufo {
+  0% {
+    left: 1000px;
+    top: 0px;
+  }
+
+  25% {
+    top: 20px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  75% {
+    top: 20px;
+  }
+
+  100% {
+    left: 345.92px;
+    top: 0px;
+  }
+}
+
+/* Dit is voor de afbeelding van het monster zelf */
+#afbeelding-monster {
+  position: absolute;
+  height: 300px;
+  width: auto;
+  left: 375.57px;
+  top: 150px;
+}
+
+/* class wordt toegevoegd aan monster afbeelding dmv javascript */
+.vlieg-animatie {
+  animation: vliegend-monster 5s 1;
+}
+
+@keyframes vliegend-monster {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 1085px;
+  }
+}
+
+/* Dit is voor de knoppen (voeren, liefde, vliegen, slapen) */
+#functie-knoppen img {
+  position: absolute;
+  height: 85px;
+  bottom: 32.5px;
+}
+
+#voeren-knop {
+  left: 292.5px;
+}
+
+#liefde-knop {
+  left: 402.5px;
+}
+
+#vliegen-knop {
+  left: 512.5px;
+}
+
+#slapen-knop {
+  left: 622.5px;
+}
+
+/* Dit is de knop voor de random keuze */
+#random-knop {
+  position: absolute;
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  font-size: 12px;
+  border: none;
+  background-color: #bc8099;
+  color: white;
+  padding: 10px 10px;
+  left: 5px;
+  bottom: 5px;
+}
